@@ -1,0 +1,13 @@
+			;while	statement
+			LDR		R0, =0	;move value 0 to R0
+			LDR		R1, =5	;move value 5 to R1
+			LDR		R2, =1	;move value 0 to R2
+beginWhile	;jump here from Line 11
+			CMP		R0,R1	;compare R0 with R1
+			BNE		loop		;jump to Line 10 if R0 < R1
+			LDR		PC, =terminateWhile ;jump to Line 12
+loop	;jump here from Line 7
+			ADD		R0, R0, R2	;R0 = R0 + R2
+			LDR		PC, =beginWhile	;jump to Line 6
+terminateWhile		;jump here if R0 = R1
+			END

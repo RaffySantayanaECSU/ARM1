@@ -1,0 +1,12 @@
+			;if		statement
+			LDR		R0, =0	;move value 0 to R0
+			LDR		R1, =5	;move value 5 to R1
+			LDR		R2, =0	;move arbitrary value to R2
+			CMP		R0, R1	;compare R0 and R1
+			BNE		else 	;branch to Line 9 if R0 =/= R1
+			LDR		R2, =2	;move value 2 to R2
+			LDR		R3, =terminateIf ;branch to Line 11
+else							;jump here from Line 6 if R0 =/= R1
+			LDR		R2, =5	;move value 5 to R2
+terminateIf					;jump here from Line 8
+			END

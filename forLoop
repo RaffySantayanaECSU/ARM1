@@ -1,0 +1,14 @@
+			;for		statement
+			LDR		R0, =0
+			LDR		R1, =10
+			LDR		R2, =0
+			LDR		R3, =1
+beginFor
+			CMP		R0, R1
+			BNE		forStatement
+			LDR		PC, =terminateFor
+forStatement
+			ADD		R0, R0, R3
+			LDR		PC, =beginFor
+terminateFor
+			END
